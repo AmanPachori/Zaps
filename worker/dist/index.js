@@ -68,10 +68,9 @@ function main() {
                     console.log(to);
                     console.log(`Sending out email to ${to} body is ${body}`);
                     yield (0, email_1.sendEmail)(to, body);
-                    console.log("------------------------------------------------------------------------------");
                 }
-                if ((currentAction === null || currentAction === void 0 ? void 0 : currentAction.type.id) === "send-sol") {
-                    console.log("sending solana");
+                if ((currentAction === null || currentAction === void 0 ? void 0 : currentAction.type.id) === "action") {
+                    console.log("Action exectuted");
                 }
                 yield new Promise((r) => setTimeout(r, 5000));
                 const lastStage = (((_g = ZapRunDetails === null || ZapRunDetails === void 0 ? void 0 : ZapRunDetails.zap.actions) === null || _g === void 0 ? void 0 : _g.length) || 1) - 1; // 1

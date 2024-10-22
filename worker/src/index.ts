@@ -76,12 +76,9 @@ async function main() {
         console.log(to);
         console.log(`Sending out email to ${to} body is ${body}`);
         await sendEmail(to, body);
-        console.log(
-          "------------------------------------------------------------------------------"
-        );
       }
-      if (currentAction?.type.id === "send-sol") {
-        console.log("sending solana");
+      if (currentAction?.type.id === "action") {
+        console.log("Action exectuted");
       }
 
       await new Promise((r) => setTimeout(r, 5000));

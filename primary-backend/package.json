@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc -b && node dist/index.js",
-    "prisma": "ts-node prisma/seed.ts"
+    "start": "tsc -b && node dist/index.js"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +21,11 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "prisma": "^5.19.1",
-    "typescript": "^5.6.2",
     "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   }
 }
